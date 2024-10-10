@@ -1,69 +1,127 @@
 .orders-page {
-    padding: 20px;
-    background-color: #2f2f2f; /* Matches the overall website background */
-    color: #f5f5f5;
-    text-align: center;
-  }
-  
-  .orders-page h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #debe8c; /* Matches your website's accent color */
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  .orders-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .orders-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #3f3f3f;
-    border-bottom: 1px solid #d1a96c;
-    font-size: 18px;
-    color: #f5f5f5;
-  }
-  
-  .orders-list li:nth-child(even) {
-    background-color: #2b2b2b;
-  }
-  
-  .orders-total {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffbe5d; /* Accent color for the total */
-  }
-  
-  .empty-orders {
-    font-size: 24px;
-    color: #f5f5f5;
-    text-align: center;
-  }
-  
-  .back-to-menu {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #c19a61;
-    color: #2f2f2f;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .back-to-menu:hover {
-    background-color: #e5a53d;
-  }
-  
+  padding: 20px;
+  background-color: #2f2f2f;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.orders-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #debe8c;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.orders-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #3f3f3f;
+  border-bottom: 1px solid #d1a96c;
+  font-size: 18px;
+  color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.order-item-name {
+  flex: 2;
+}
+
+.order-item-price {
+  flex: 1;
+  text-align: right;
+}
+
+.orders-total {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffbe5d;
+}
+
+.empty-orders {
+  font-size: 24px;
+  color: #f5f5f5;
+}
+
+.checkout-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2f2f2f;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  z-index: 1000;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.checkout-form h2 {
+  margin-bottom: 20px;
+  color: #debe8c;
+}
+
+.checkout-submit {
+  background-color: #debe8c;
+  color: #2f2f2f;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+  background-color: #c19a61;
+  color: #2f2f2f;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.checkout-submit:hover,
+.cancel-button:hover {
+  background-color: #e5a53d;
+}
+/* Style for regular links */
+a {
+  color: #d1a96c; /* Change this to your preferred color */
+  text-decoration: none;
+}
+
+/* Style for links on hover */
+a:hover {
+  color: #e5a53d; /* Change this to a color for hover effect */
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Style for visited links */
+a:visited {
+  color: #d1a96c; /* Match the color of unvisited links */
+}

@@ -1,92 +1,133 @@
+/* Base styling for the home page */
 .home-page {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    text-align: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Video background styling */
+.video-background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  object-fit: cover; 
+  z-index: -1; 
+}
+
+/* Content box styling with gradient overlay */
+.content {
+  position: relative;
+  z-index: 1;
+  top: 40%;
+  background: linear-gradient(135deg, rgba(210, 160, 95, 0.7), rgba(139, 69, 19, 0.8));
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Georgia', serif;
+}
+
+/* Styling for the welcome text */
+.welcome-text {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar link styling */
+nav a {
+  margin: 0 20px;
+  font-size: 1.5em;
+  color: #f8f8f8;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #A0522D; /* Same hover color as the login button */
+  color: #fff;
+}
+
+/* Styling for the login/register button */
+.login-button {
+  padding: 12px 25px;
+  background: #8B4513;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: #A0522D; /* Lighter shade on hover */
+}
+
+/* Login form styling */
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  margin-top: 15px; 
+  border-radius: 10px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 12px;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #A0522D;
+}
+
+/* Styling for the overlay */
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2em;
   }
-  
-  
-  .video-background {
-    position: fixed; /* Fix it to the screen so it covers the entire background */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Set the width to 100% of the viewport width */
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    object-fit: cover; /* Ensures the video covers the area without distortion */
-    z-index: -1; /* Place the video behind the content */
-    overflow: hidden;
-  }
-  
-  .content {
-    position: relative;
-    z-index: 1;
-    top: 40%;
-    background-color:   rgba(210, 160, 95, 0.696); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 10px; /* Optional: Add rounded corners */
-  }
-  
+
   nav a {
-    margin: 0 20px;
-    font-size: 1.5em;
-    color: #000000;
-    text-decoration: none;
+    font-size: 1.2em;
   }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .login-form {
-    background-color: rgba(255, 255, 255, 0.8);
+
+  .content {
     padding: 20px;
-    margin-top: 10px; /* Reduce the space between content and form */
-    border-radius: 10px;
-    text-align: left;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
   }
-  
-  .login-form h2 {
-    margin-bottom: 10px;
-  }
-  
-  .login-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .login-form button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .login-form span {
-    color: blue;
-    cursor: pointer;
-  }
-  
-  /* Adjusting the Login/Register Button */
-button {
-    margin-top: 20px; /* Add space between the text and the button */
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+}

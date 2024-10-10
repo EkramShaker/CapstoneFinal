@@ -62,7 +62,7 @@ function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <img src="/logo/codebrew-logo.png" alt="CodeBrew Cafe Logo" className="logo" />
+        <img src="/logo/coffeelogo.png" alt="CodeBrew Cafe Logo" className="logo" />
       </Link>
       <nav>
         <Link to="/menu">Menu</Link>

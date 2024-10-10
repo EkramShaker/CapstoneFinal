@@ -67,6 +67,13 @@ function Menu() {
       ],
     },
   ];
+  // Updated addItemToOrder function to parse price correctly
+    
+  const handleAddToOrder = (item) => {
+    const parsedPrice = parseFloat(item.price.replace('$', ''));
+    const itemWithParsedPrice = { ...item, price: parsedPrice };
+    addItemToOrder(itemWithParsedPrice);
+  };
 
   return (
     <div className="menu-page">
@@ -82,7 +89,7 @@ function Menu() {
                 <p>{item.price}</p>
                 <button 
                   className="add-to-order-button" 
-                  onClick={() => addItemToOrder(item)}
+                  onClick={() => handleAddToOrder(item)} // Use handleAddToOrder here
                 >
                   Add to Order
                 </button>

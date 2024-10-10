@@ -1,3 +1,4 @@
+// OrderContext.jsx
 import React, { createContext, useState } from 'react';
 
 // Create the context
@@ -14,7 +15,7 @@ export const OrderProvider = ({ children }) => {
   };
 
   return (
-    <OrderContext.Provider value={{ orders, addItemToOrder, user, setUser }}>
+    <OrderContext.Provider value={{ orders, setOrders, addItemToOrder, user, setUser }}>
       {children}
     </OrderContext.Provider>
   );

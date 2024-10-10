@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -6,6 +7,14 @@ import AboutUs from './pages/AboutUs';
 import Orders from './pages/Orders';
 import Header from './components/Header';
 import { OrderProvider } from './context/OrderContext';
+
+
+ReactDOM.render(
+  <OrderProvider>
+    <App />
+  </OrderProvider>,
+  document.getElementById('root')
+);
 
 function App() {
   return (
