@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import axios from 'axios';
-import { OrderContext } from '../context/OrderContext'; // Assuming you're using this context to store user login state
+import { OrderContext } from '../context/OrderContext'; 
 
 function Header() {
   const [showLogin, setShowLogin] = useState(false);
@@ -11,26 +11,26 @@ function Header() {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const { user, setUser } = useContext(OrderContext); // Using context to store login info
+  const { user, setUser } = useContext(OrderContext); 
   const navigate = useNavigate();
 
   const toggleLogin = () => {
     setShowLogin(!showLogin);
-    setErrorMessage(''); // Clear any previous error messages
+    setErrorMessage(''); 
   };
 
   const toggleRegister = () => {
     setIsRegistering(!isRegistering);
-    setErrorMessage(''); // Clear any previous error messages
+    setErrorMessage(''); 
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      setUser(res.data.user); // Assuming the response has a user object
-      setShowLogin(false); // Close login form on success
-      navigate('/'); // Redirect to home page
+      setUser(res.data.user); 
+      setShowLogin(false); 
+      navigate('/');
     } catch (error) {
       setErrorMessage('Invalid credentials. Please try again.');
     }
@@ -40,8 +40,8 @@ function Header() {
     e.preventDefault();
     try {
       const res = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
-      setUser(res.data.user); // Assuming the response has a user object
-      setShowLogin(false); // Close registration form on success
+      setUser(res.data.user); 
+      setShowLogin(false); 
       navigate('/'); // Redirect to home page
     } catch (error) {
       console.error('Registration error:', error.response?.data || error.message);
@@ -51,9 +51,9 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/api/auth/logout');  // Ensure correct URL is used
-      setUser(null); // Clear user from context
-      navigate('/'); // Redirect to home
+      await axios.post('http://localhost:5000/api/auth/logout');  
+      setUser(null); 
+      navigate('/'); 
     } catch (error) {
       setErrorMessage('Failed to log out. Try again.');
     }

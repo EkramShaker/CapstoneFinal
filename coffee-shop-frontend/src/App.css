@@ -5,30 +5,28 @@
   text-align: center;
 }
 
-/* Updated logo styles */
 .logo-container {
   position: absolute;
-  top: -50px; /* Adjust this value to place the logo above the navbar */
+  top: -50px;
   left: 20px;
-  z-index: 10; /* Ensure it stays on top */
+  z-index: 10; 
   padding: 10px;
-  background-color: #f5f5f5; /* Optional: add a background color */
-  border-radius: 50%; /* Make the logo circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle drop shadow */
+  background-color: #f5f5f5; 
+  border-radius: 50%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  width: 150px; /* Increase size */
+  width: 150px; 
   height: auto;
 }
 
-/* Optional: Add animation on hover */
 .logo:hover {
-  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  transform: scale(1.1); 
   transition: transform 0.3s ease;
 }
 .navbar {
-  margin-top: 80px; /* Add top margin to give space for the logo */
+  margin-top: 80px; 
 }
 
 

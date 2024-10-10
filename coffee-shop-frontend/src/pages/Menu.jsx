@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'; // Ensure you import useContext
+import React, { useContext } from 'react'; 
 import { Link } from 'react-router-dom';
-import { OrderContext } from '../context/OrderContext'; // Ensure OrderContext is imported
+import { OrderContext } from '../context/OrderContext'; 
 import './Menu.css';
 
 function Menu() {
-  const { addItemToOrder } = useContext(OrderContext); // Use the context for adding items
+  const { addItemToOrder } = useContext(OrderContext); 
   
   const menuSections = [
     {
